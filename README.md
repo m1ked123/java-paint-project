@@ -1,21 +1,34 @@
-#Version 0.4.1 [9/8/15]
+# Paint Application
 
-##Application Summary
 This is a simple painting application in the same vein as Microsoft Paint. It has little functionality, but allows for some of the most basic functionality including the ability to pain on a blank canvas in various colors and sizes.
 
-##What's New
+Features of this app include the following...
+
+1. Draw free form lines on the canvas
+2. Change the color on the canvas
+3. Draw rectangles and filled rectangles on the canvas
+4. Draw ovals and filled ovals on the canvas
+5. Change the color of the paint used to draw on the canvas
+6. Save drawings as .png images
+7. Enable antialiasing on drawings
+8. Undo and redo actions
+9. Change the brush size
+
+
+## Version 0.4.1 [9/8/15]
+### What's New in this Version
 	
-###bug fixes
+#### Bug Fixes
 * No major bug fixes this cycle
 
-###features
+#### Features
 * Can no longer resize the paint brush larger than 10px
 
 		
-###code
+#### Code
 * All paint code has been consolidated into one method
 		
-##Known Bugs
+## Known Bugs
 * The application can lag after drawing a really long line.
 * Resizing the frame does not resize the drawing area; resizing is not enabled for this reason
 
