@@ -50,6 +50,9 @@ public class EntityHashTable {
 		enforceLoadFactor();
 		int hashValue = Math.abs(entityToAdd.hashCode()) % hashTable.length;
 		int offset = 1;
+		
+		// Try to find a viable hash value if the one created given to
+		// the entity initially is not valid
 		while (hashTable[hashValue] != null && hashTable[hashValue].isActive()) {
 			hashValue = (Math.abs(entityToAdd.hashCode()) + (offset * offset)) % hashTable.length;
 			offset++;
@@ -66,6 +69,7 @@ public class EntityHashTable {
 	 * @param entityToRemove the entity to remove from the table
 	 */
 	public void remove(CanvasEntity entityToRemove) {
+		// using lazy delete
 		if (contains(entityToRemove)) {
 			hashTable[findPosition(entityToRemove)].setActive(false);
 			size--;
